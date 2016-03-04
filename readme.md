@@ -1,8 +1,8 @@
 # ララベル5.2 開発用キット
 
 ````
-$ git clone https://github.com/chatbox-inc/laravel-kit
-$ cd laravel-kit
+$ git clone https://github.com/chatbox-inc/laravel-database
+$ cd laravel-database
 $ composer install
 $ vendor/bin/homestead make
 ````

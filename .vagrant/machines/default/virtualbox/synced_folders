@@ -1,0 +1,1 @@
+{"virtualbox":{"/home/vagrant/laravel-database":{"type":null,"mount_options":[],"guestpath":"/home/vagrant/laravel-database","hostpath":"/Users/shouno/laravel-database","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/shouno/laravel-database","disabled":false,"__vagrantfile":true}}}

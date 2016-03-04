@@ -29,3 +29,17 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
     //
 });
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('/home', 'HomeController@index');
+});
+
+Route::group(['middleware' => 'web', 'auth'], function () {
+    Route::get('/blog/index', 'BlogController@getIndex');
+    Route::get('/blog/new', 'BlogController@getNew');
+    Route::post('/blog/confirm', 'BlogController@postConfirm');
+    Route::get('/blog/complete', 'BlogController@getComplete');
+    Route::post('/blog/complete', 'BlogController@postComplete');
+});
