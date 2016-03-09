@@ -14,26 +14,13 @@
                                 <td class="col-xs-3">内容</td>
                                 <td class="col-xs-1">更新日</td>
                             </tr>
+                            @foreach($pageList as $page)
                             <tr class="post">
-                                <th class="col-xs-2">投稿１</th>
-                                <td class="col-xs-3">ここにブログ記事が表示されます。・・・</td>
-                                <td class="col-xs-1">2016-03-04</td>
+                                <th class="col-xs-2">{{$page->blogTitle}}</th>
+                                <td class="col-xs-3">{{$page->blogContents}}</td>
+                                <td class="col-xs-1">{{$page->blogUpdateDay}}</td>
                             </tr>
-                            <tr class="post">
-                                <th class="col-xs-2">投稿２</th>
-                                <td class="col-xs-3">ここにブログ記事が表示されます。・・・</td>
-                                <td class="col-xs-1">2016-03-04</td>
-                            </tr>
-                            <tr class="post">
-                                <th class="col-xs-2">投稿３</th>
-                                <td class="col-xs-3">ここにブログ記事が表示されます。・・・</td>
-                                <td class="col-xs-1">2016-03-04</td>
-                            </tr>
-                            <tr class="post">
-                                <th class="col-xs-2">投稿４</th>
-                                <td class="col-xs-3">ここにブログ記事が表示されます。・・・</td>
-                                <td class="col-xs-1">2016-03-04</td>
-                            </tr>
+                            @endforeach
                         </table>
                     </div>
                 </div>

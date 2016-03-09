@@ -27,7 +27,7 @@ class BlogController extends Controller
     }
     public function postConfirm()
     {
-        $formData = $request -> all ();
+        $formData = $this->request -> all ();
         $request->session()->put("$formData");
         return view('/blog/confirm');
     }
@@ -35,8 +35,16 @@ class BlogController extends Controller
     {
         return view('/blog/complete');
     }
-    public function postComplete()
+    public function postComplete(Request $request)
     {
+        $formData = $request->session()->get("formData");
+
+        //  データベースに登録する
+        $blog = new Blog (); //　空っぽでボディーをつくる
+        $blog->blogTitle = $formData["blogTitle"];
+        $blog->blogContents = $formData["blogContents"];
+        $blog->status = 0;
+        $blog->save();
 
         return redirect('/blog/complete');
     }
